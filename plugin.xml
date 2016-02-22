@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  id="com.synconset.canopenurl"
-  version="0.1.0">
+  id="cordova-plugin-can-open-url"
+  version="0.2.0">
 
 	<name>CanOpenURL</name>
 	 
@@ -27,6 +27,12 @@
 				<param name="ios-package" value="CanOpenURL"/>
 			</feature>
 		</config-file>
+		
+		<config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+            <array>
+                <string>comgooglemaps-x-callback</string>
+            </array>
+        </config-file>
 
 		<header-file src="src/ios/CanOpenURL.h" />
 		<source-file src="src/ios/CanOpenURL.m" />
