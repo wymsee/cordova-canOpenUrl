@@ -22,4 +22,17 @@
 	}
 }
 
+- (void) openURL:(CDVInvokedUrlCommand *)command {
+	CDVPluginResult* result = nil;
+	NSString *urlArg = [command.arguments objectAtIndex: 0];
+	if ([[UIApplication sharedApplication] openURL:
+    [NSURL URLWithString:urlArg]]) {
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:1];
+		[self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+	} else {
+		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:0];
+		[self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+	}
+}
+
 @end
