@@ -11,4 +11,6 @@
 
 - (void) checkURL:(CDVInvokedUrlCommand *)command;
 
+- (void) openURL:(CDVInvokedUrlCommand *)command;
+
 @end

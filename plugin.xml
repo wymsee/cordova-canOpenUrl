@@ -31,6 +31,7 @@
 		<config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
             <array>
                 <string>comgooglemaps-x-callback</string>
+				<string>maps</string>
             </array>
         </config-file>
 
